@@ -1,0 +1,378 @@
+# Copyright (C) 2026 Woo 1C Sync
+msgid ""
+msgstr ""
+"Project-Id-Version: Woo 1C Sync 0.9.20\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-30 12:00+0000\n"
+"PO-Revision-Date: 2026-06-30 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/Admin/SettingsPage.php
+msgid "Настройки"
+msgstr "Settings"
+
+#: src/Admin/SettingsPage.php src/Services/SettingsService.php
+msgid "1С"
+msgstr "1C"
+
+#: src/Admin/SettingsPage.php
+msgid "Включено"
+msgstr "Enabled"
+
+#: src/Admin/SettingsPage.php
+msgid "переопределено в wp-config.php"
+msgstr "overridden in wp-config.php"
+
+#: src/Admin/SettingsPage.php
+msgid "Разделы настроек"
+msgstr "Settings sections"
+
+#: src/Admin/SettingsPage.php
+msgid "Настройки обмена с 1С"
+msgstr "1C Exchange Settings"
+
+#: src/Admin/SettingsPage.php
+msgid "Некоторые опции переопределены константами в wp-config.php и не могут быть изменены здесь:"
+msgstr "Some options are overridden by constants in wp-config.php and cannot be changed here:"
+
+#: src/Admin/SettingsPage.php
+msgid "URL обмена"
+msgstr "Exchange URL"
+
+#: src/Admin/SettingsPage.php
+msgid "Самые частые ошибки: 404 Not Found (не сохранены постоянные ссылки), слишком длинный URL для поля в 1С (используйте /e или /wc1c/exc), HTTPS с просроченным сертификатом. После обновления плагина обязательно: Настройки → Постоянные ссылки → Сохранить."
+msgstr "Most common errors: 404 Not Found (permalinks not saved), URL too long for the 1C field (use /e or /wc1c/exc), HTTPS with an expired certificate. After a plugin update you must go to Settings → Permalinks → Save."
+
+#: src/Admin/SettingsPage.php
+msgid "Для 1С (макс. 35 символов):"
+msgstr "For 1C (max 35 chars):"
+
+#: src/Admin/SettingsPage.php
+msgid "симв."
+msgstr "chars"
+
+#: src/Admin/SettingsPage.php
+msgid "После обновления плагина: Настройки → Постоянные ссылки → Сохранить. Требуется для nginx (не только .htaccess)."
+msgstr "After plugin update: Settings → Permalinks → Save. Required for nginx (not only .htaccess)."
+
+#: src/Admin/SettingsPage.php
+msgid "Аутентификация"
+msgstr "Authentication"
+
+#: src/Admin/SettingsPage.php
+msgid "Ошибки «No authentication credentials» и «Invalid cookie» чаще всего из-за FastCGI/nginx: заголовок Authorization не доходит до PHP. Не используйте подписчиков и редакторов — нужна роль «Управляющий магазином» или «Администратор». Пароль приложения WordPress не подойдёт — только обычный пароль пользователя."
+msgstr "Errors \"No authentication credentials\" and \"Invalid cookie\" are usually caused by FastCGI/nginx: the Authorization header does not reach PHP. Do not use subscribers or editors — Shop Manager or Administrator role is required. WordPress application passwords will not work — use the user's regular password."
+
+#: src/Admin/SettingsPage.php
+msgid "Используйте логин и пароль пользователя WordPress с ролью «Управляющий магазином» или «Администратор»."
+msgstr "Use login and password of a WordPress user with role Shop Manager or Administrator."
+
+#: src/Admin/SettingsPage.php
+msgid "Если аутентификация не работает на FastCGI, добавьте эту строку в .htaccess после RewriteEngine On:"
+msgstr "If auth fails on FastCGI, add this line to .htaccess after RewriteEngine On:"
+
+#: src/Admin/SettingsPage.php
+msgid "Каталог данных"
+msgstr "Data directory"
+
+#: src/Admin/SettingsPage.php
+msgid "Сюда 1С загружает XML и ZIP. Если обмен падает на этапе file — проверьте права на запись в wp-content/uploads/ и свободное место на диске. Каталог закрыт от прямого доступа через .htaccess."
+msgstr "1C uploads XML and ZIP files here. If exchange fails at the file stage, check write permissions on wp-content/uploads/ and free disk space. The directory is blocked from direct access via .htaccess."
+
+#: src/Admin/SettingsPage.php
+msgid "Лимиты сервера"
+msgstr "Server limits"
+
+#: src/Admin/SettingsPage.php
+msgid "При «Failed to save file» или таймауте увеличьте post_max_size, upload_max_filesize, memory_limit и max_execution_time у хостинга. Лимит в настройках обмена не может быть больше post_max_size. Для больших каталогов настройте пакетную выгрузку в 1С."
+msgstr "On \"Failed to save file\" or timeout, increase post_max_size, upload_max_filesize, memory_limit and max_execution_time on your host. The exchange file limit cannot exceed post_max_size. For large catalogs, configure batch export in 1C."
+
+#: src/Admin/SettingsPage.php
+msgid "Сохранить настройки"
+msgstr "Save settings"
+
+#: src/Admin/SettingsPage.php src/Services/SettingsService.php
+msgid "Инструменты"
+msgstr "Tools"
+
+#: src/Admin/SettingsPage.php
+msgid "Очистить данные обмена"
+msgstr "Clean exchange data"
+
+#: src/Admin/SettingsPage.php
+msgid "Необратимая операция: удаляются все категории, атрибуты и товары, созданные плагином (по метке _wc1c_guid). Заказы и ручные товары без GUID не затрагиваются. Сделайте резервную копию перед очисткой."
+msgstr "Irreversible operation: removes all categories, attributes and products created by the plugin (by _wc1c_guid meta). Orders and manual products without GUID are not affected. Back up before cleanup."
+
+#: src/Admin/SettingsPage.php
+msgid "Удаляет категории, атрибуты и товары, созданные плагином."
+msgstr "Removes categories, attributes and products created by the plugin."
+
+#: src/Admin/SettingsPage.php
+msgid "Открыть страницу очистки"
+msgstr "Open cleanup page"
+
+#: src/Services/SettingsService.php
+msgid "Подавлять PHP notices"
+msgstr "Suppress PHP notices"
+
+#: src/Services/SettingsService.php
+msgid "Скрывать некритичные PHP-уведомления во время обмена."
+msgstr "Hide non-critical PHP notices during exchange."
+
+#: src/Services/SettingsService.php
+msgid "Если 1С пишет «ошибка разбора ответа» или вместо success приходит HTML с предупреждениями PHP — включите эту опцию. Также проверьте, что на сайте нет вывода до ответа плагина (пробелы в wp-config, отладочные плагины)."
+msgstr "If 1C reports a parse error or returns HTML with PHP warnings instead of success, enable this option. Also check that nothing outputs before the plugin response (spaces in wp-config, debug plugins)."
+
+#: src/Services/SettingsService.php
+msgid "Лимит размера файла"
+msgstr "File size limit"
+
+#: src/Services/SettingsService.php
+msgid "Дополнительный лимит для 1С (например, 100M). Пусто — только лимиты сервера."
+msgstr "Additional limit for 1C (e.g. 100M). Empty — server limits only."
+
+#: src/Services/SettingsService.php
+msgid "При ошибке загрузки файла или обрыве на больших каталогах уменьшите лимит (например, 10M), чтобы 1С дробила выгрузку на части. Значение не должно превышать post_max_size и memory_limit на сервере."
+msgstr "On upload errors or failures with large catalogs, lower the limit (e.g. 10M) so 1C splits the export into chunks. The value must not exceed post_max_size and memory_limit on the server."
+
+#: src/Services/SettingsService.php
+msgid "Кодировка XML"
+msgstr "XML charset"
+
+#: src/Services/SettingsService.php
+msgid "Кодировка ответов при обмене с 1С."
+msgstr "Charset of exchange responses to 1C."
+
+#: src/Services/SettingsService.php
+msgid "Если в 1С «кракозябры» в заказах или ошибка кодировки — попробуйте windows-1251. Для современных конфигураций УТ обычно достаточно UTF-8. Кодировка должна совпадать с настройками обмена в 1С."
+msgstr "If 1C shows garbled text in orders or charset errors, try windows-1251. For modern Trade Management setups UTF-8 is usually enough. Charset must match exchange settings in 1C."
+
+#: src/Services/SettingsService.php
+msgid "Отключить вариации"
+msgstr "Disable variations"
+
+#: src/Services/SettingsService.php
+msgid "Импортировать товары с «#» в GUID как простые товары, без вариаций."
+msgstr "Import products with \"#\" in GUID as simple products, without variations."
+
+#: src/Services/SettingsService.php
+msgid "Включайте, если вариации дублируются, не создаются или ломают карточку товара. Подходит для каталогов, где каждый размер/цвет выгружается как отдельный товар без характеристик."
+msgstr "Enable if variations duplicate, fail to create or break the product page. Suitable for catalogs where each size/color is exported as a separate product without characteristics."
+
+#: src/Services/SettingsService.php
+msgid "Статус «нет в наличии»"
+msgstr "Out of stock status"
+
+#: src/Services/SettingsService.php
+msgid "Статус WooCommerce при нулевом остатке."
+msgstr "WooCommerce status when stock quantity is zero."
+
+#: src/Services/SettingsService.php
+msgid "Если товары с нулевым остатком остаются «в наличии» или наоборот скрываются не так, как нужно — проверьте эту настройку и опцию «Управление запасами»."
+msgstr "If zero-stock products stay \"in stock\" or are hidden incorrectly, check this setting and \"Manage stock\"."
+
+#: src/Services/SettingsService.php
+msgid "Управление запасами"
+msgstr "Manage stock"
+
+#: src/Services/SettingsService.php
+msgid "Включать учёт остатков у импортированных товаров."
+msgstr "Enable stock management for imported products."
+
+#: src/Services/SettingsService.php
+msgid "При значении «no» WooCommerce не будет учитывать количество из offers.xml — остатки перестанут обновляться. Оставляйте «yes», если синхронизируете склад из 1С."
+msgstr "With \"no\", WooCommerce will ignore quantities from offers.xml and stock will stop updating. Keep \"yes\" if you sync stock from 1C."
+
+#: src/Services/SettingsService.php
+msgid "Очищать временные файлы"
+msgstr "Clean up temporary files"
+
+#: src/Services/SettingsService.php
+msgid "Удалять старые файлы обмена в начале каждой сессии."
+msgstr "Delete old exchange files at the start of each session."
+
+#: src/Services/SettingsService.php
+msgid "Если обмен обрывается на полпути и следующая выгрузка «залипает» на старых файлах — оставьте включённым. Отключайте только при отладке, когда нужно вручную смотреть XML в каталоге данных."
+msgstr "If exchange aborts mid-way and the next run gets stuck on old files, keep this enabled. Disable only when debugging and inspecting XML in the data directory manually."
+
+#: src/Services/SettingsService.php
+msgid "Валюта заказов"
+msgstr "Order currency"
+
+#: src/Services/SettingsService.php
+msgid "Код валюты для выгрузки заказов в 1С (например, RUB). Пусто — из заказа WooCommerce."
+msgstr "Currency code for order export to 1C (e.g. RUB). Empty — from WooCommerce order."
+
+#: src/Services/SettingsService.php
+msgid "Если 1С не принимает заказы или ругается на валюту — укажите код, который есть в справочнике 1С (RUB, USD, EUR). Код должен совпадать с настройками учёта в УТ."
+msgstr "If 1C rejects orders or complains about currency, set a code that exists in 1C (RUB, USD, EUR). The code must match accounting settings in Trade Management."
+
+#: src/Services/SettingsService.php
+msgid "Тип цены"
+msgstr "Price type"
+
+#: src/Services/SettingsService.php
+msgid "GUID или название типа цены из 1С. Пусто — первая цена из выгрузки."
+msgstr "GUID or name of price type from 1C. Empty — first price from export."
+
+#: src/Services/SettingsService.php
+msgid "Если на сайте неверная цена (опт вместо розницы) — скопируйте точное название или GUID типа цены из offers.xml или из 1С. При нескольких типах цен в выгрузке без этой настройки берётся первая попавшаяся."
+msgstr "If the site shows the wrong price (wholesale instead of retail), copy the exact name or GUID of the price type from offers.xml or 1C. With multiple price types in the export, the first one is used without this setting."
+
+#: src/Services/SettingsService.php
+msgid "Сохранять вариации при частичном обмене"
+msgstr "Preserve variations on partial exchange"
+
+#: src/Services/SettingsService.php
+msgid "Не удалять вариации, отсутствующие в частичной выгрузке offers.xml."
+msgstr "Do not delete variations missing from partial offers.xml export."
+
+#: src/Services/SettingsService.php
+msgid "При частичной выгрузке остатков вариации могут пропадать с сайта. Включите, если 1С отдаёт не все предложения в каждом обмене. При полной выгрузке offers.xml эта опция не нужна."
+msgstr "On partial stock exports, variations may disappear from the site. Enable if 1C does not send all offers in every exchange. Not needed for full offers.xml exports."
+
+#: src/Services/SettingsService.php
+msgid "Описание в контент"
+msgstr "Description to content"
+
+#: src/Services/SettingsService.php
+msgid "Записывать описание товара из 1С в post_content (иначе в excerpt)."
+msgstr "Write product description from 1C to post_content (otherwise to excerpt)."
+
+#: src/Services/SettingsService.php
+msgid "Зависит от темы WooCommerce: одни темы выводят полное описание (content), другие — краткое (excerpt). Если описание не видно на витрине — переключите эту опцию."
+msgstr "Depends on the WooCommerce theme: some show full description (content), others short (excerpt). If description is missing on the storefront, toggle this option."
+
+#: src/Services/SettingsService.php
+msgid "Не удалять отсутствующие данные"
+msgstr "Do not remove missing data"
+
+#: src/Services/SettingsService.php
+msgid "При полной выгрузке не удалять категории, атрибуты и товары, которых нет в XML."
+msgstr "On full export, do not delete categories, attributes and products missing from XML."
+
+#: src/Services/SettingsService.php
+msgid "Защита от массового удаления: если полная выгрузка из 1С пришла неполной или пустой, без этой опции плагин может снести товары, которых нет в XML. Включайте на первом обмене или при сомнениях в выгрузке."
+msgstr "Protection against mass deletion: if a full export from 1C is incomplete or empty, the plugin may remove products missing from XML without this option. Enable on first exchange or when unsure about the export."
+
+#: src/Services/SettingsService.php
+msgid "Обновлять slug товара"
+msgstr "Update product slug"
+
+#: src/Services/SettingsService.php
+msgid "Обновлять post_name (ЧПУ) при каждом импорте."
+msgstr "Update post_name (permalink slug) on every import."
+
+#: src/Services/SettingsService.php
+msgid "Включение меняет URL товаров при переименовании в 1С — ломаются закладки и SEO. Оставляйте выключенным, если ссылки уже проиндексированы. Включайте только при первичном импорте."
+msgstr "Enabling changes product URLs when renamed in 1C — breaks bookmarks and SEO. Keep off if URLs are already indexed. Enable only on initial import."
+
+#: src/Services/SettingsService.php
+msgid "Сопоставлять по артикулу"
+msgstr "Match by SKU"
+
+#: src/Services/SettingsService.php
+msgid "Искать существующий товар по SKU, если GUID не найден."
+msgstr "Find existing product by SKU when GUID is not found."
+
+#: src/Services/SettingsService.php
+msgid "Полезно при переезде с другого плагина или ручном создании товаров. Риск: при совпадении артикулов разные товары из 1С могут «склеиться» в один. Артикулы должны быть уникальны."
+msgstr "Useful when migrating from another plugin or with manually created products. Risk: matching SKUs may merge different 1C products into one. SKUs must be unique."
+
+#: src/Services/SettingsService.php
+msgid "Категории по названию"
+msgstr "Match categories by title"
+
+#: src/Services/SettingsService.php
+msgid "Сопоставлять категории по названию, если GUID не найден."
+msgstr "Match categories by title when GUID is not found."
+
+#: src/Services/SettingsService.php
+msgid "Если после импорта дублируются категории с одинаковыми названиями — выключите или сначала привяжите GUID вручную. Включайте при первом обмене с уже существующим деревом категорий на сайте."
+msgstr "If duplicate categories with the same names appear after import, disable this or bind GUIDs manually first. Enable on first exchange when the site already has a category tree."
+
+#: src/Services/SettingsService.php
+msgid "Свойства по названию"
+msgstr "Match attributes by title"
+
+#: src/Services/SettingsService.php
+msgid "Сопоставлять атрибуты по названию, если GUID не найден."
+msgstr "Match attributes by title when GUID is not found."
+
+#: src/Services/SettingsService.php
+msgid "Аналогично категориям: помогает не плодить дубликаты атрибутов «Цвет», «Размер» и т.д. Одинаковые названия в 1С и WooCommerce должны означать одно и то же свойство."
+msgstr "Same as categories: helps avoid duplicate attributes like Color, Size, etc. Matching names in 1C and WooCommerce must mean the same property."
+
+#: src/Services/SettingsService.php
+msgid "Значения свойств по названию"
+msgstr "Match attribute values by title"
+
+#: src/Services/SettingsService.php
+msgid "Сопоставлять значения атрибутов по названию, если GUID не найден."
+msgstr "Match attribute values by title when GUID is not found."
+
+#: src/Services/SettingsService.php
+msgid "Если у вариаций «плывут» значения (Красный vs красный) — проверьте эту опцию и «GUID как slug». Для кириллических slug в URL может понадобиться отключить GUID как slug."
+msgstr "If variation values drift (Red vs red), check this option and \"GUID as slug\". For Cyrillic slugs in URLs you may need to disable GUID as slug."
+
+#: src/Services/SettingsService.php
+msgid "GUID как slug значения свойства"
+msgstr "GUID as attribute value slug"
+
+#: src/Services/SettingsService.php
+msgid "Использовать GUID 1С в slug терминов атрибутов."
+msgstr "Use 1C GUID in attribute term slugs."
+
+#: src/Services/SettingsService.php
+msgid "По умолчанию включено для стабильного сопоставления. Отключите, если в URL фильтров появляются длинные GUID или ломается кириллица в ЧПУ — тогда slug будет из названия значения."
+msgstr "Enabled by default for stable matching. Disable if filter URLs show long GUIDs or Cyrillic permalinks break — then slug will be based on the value name."
+
+#: src/Services/SettingsService.php
+msgid "Разделитель множественных значений"
+msgstr "Multiple values delimiter"
+
+#: src/Services/SettingsService.php
+msgid "Символ для разбиения строки на несколько значений свойства. Пусто — одно значение."
+msgstr "Character to split a string into multiple property values. Empty — single value."
+
+#: src/Services/SettingsService.php
+msgid "Если одно свойство в 1С приходит строкой «Красный;Синий», укажите разделитель (; или ,). Без разделителя всё запишется как одно значение атрибута."
+msgstr "If a property from 1C arrives as \"Red;Blue\", set the delimiter (; or ,). Without a delimiter everything is stored as one attribute value."
+
+#: src/Services/SettingsService.php
+msgid "Подключение 1С"
+msgstr "1C connection"
+
+#: src/Services/SettingsService.php
+msgid "Обмен"
+msgstr "Exchange"
+
+#: src/Services/SettingsService.php
+msgid "Импорт каталога"
+msgstr "Catalog import"
+
+#: src/Services/SettingsService.php
+msgid "Цены и остатки"
+msgstr "Prices and stock"
+
+#: src/Services/SettingsService.php
+msgid "Заказы"
+msgstr "Orders"
+
+#: src/Plugin.php
+msgid "Плагин <strong>%s</strong> требует установки и активации плагина <strong>WooCommerce</strong>."
+msgstr "Plugin <strong>%s</strong> requires plugin <strong>WooCommerce</strong> to be installed and activated."
+
+#. Plugin Name of the plugin/theme
+msgid "Синхронизация WooCommerce и 1С"
+msgstr "Woo 1C Sync"
+
+#. Description of the plugin/theme
+msgid "Синхронизирует WooCommerce с 1С:Предприятие 8 (Управление торговлей) — каталог, цены, остатки и заказы по протоколу CommerceML."
+msgstr "Synchronizes WooCommerce with 1C:Enterprise 8 (Trade Management) — catalog, prices, stock, and orders via CommerceML."
